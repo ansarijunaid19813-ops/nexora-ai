@@ -1,0 +1,51 @@
+name: nexora_ai
+description: NEXORA AI - Premium Business Operating System
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.9.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.6.1
+  
+  # Navigation
+  go_router: ^14.6.2
+  
+  # UI
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.0
+  glassmorphism: ^3.0.0
+  
+  # Storage
+  shared_preferences: ^2.3.3
+  
+  # Utils
+  uuid: ^4.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700

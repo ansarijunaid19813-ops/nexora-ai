@@ -3,10 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme/app_theme.dart';
 import 'core/constants/app_constants.dart';
 import 'features/auth/splash_screen.dart';
+import '../../models/chat_message_model.dart';
 import 'features/auth/login_screen.dart';
 import 'features/auth/signup_screen.dart';
 import 'features/auth/forgot_password_screen.dart';
 import 'features/dashboard/dashboard_screen.dart';
+import 'features/chat/chat_screen.dart';
 
 void main() {
   runApp(
@@ -33,6 +35,7 @@ class NexoraApp extends StatelessWidget {
         AppConstants.routeForgotPassword: (context) =>
             const ForgotPasswordScreen(),
         AppConstants.routeDashboard: (context) => const DashboardScreen(),
+        AppConstants.routeChat: (context) => const ChatScreen(),
       },
     );
   }

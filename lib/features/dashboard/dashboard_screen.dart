@@ -42,24 +42,32 @@ class DashboardScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    width: 48,
-                    height: 48,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.card,
-                      border: Border.all(
-                        color: AppColors.accent,
-                        width: 1.5,
-                      ),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'JA',
-                        style: TextStyle(
+                                    GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        AppConstants.routeProfile,
+                      );
+                    },
+                    child: Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: AppColors.card,
+                        border: Border.all(
                           color: AppColors.accent,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                          width: 1.5,
+                        ),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'JA',
+                          style: TextStyle(
+                            color: AppColors.accent,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),

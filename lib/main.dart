@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme/app_theme.dart';
+import 'core/constants/app_constants.dart';
+import 'features/auth/splash_screen.dart';
+import 'features/auth/login_screen.dart';
+import 'features/auth/signup_screen.dart';
+import 'features/auth/forgot_password_screen.dart';
 
 void main() {
   runApp(
@@ -19,18 +24,14 @@ class NexoraApp extends StatelessWidget {
       title: 'NEXORA AI',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'NEXORA AI',
-            style: TextStyle(
-              color: Color(0xFFD4AF37),
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
+      initialRoute: AppConstants.routeSplash,
+      routes: {
+        AppConstants.routeSplash: (context) => const SplashScreen(),
+        AppConstants.routeLogin: (context) => const LoginScreen(),
+        AppConstants.routeSignup: (context) => const SignupScreen(),
+        AppConstants.routeForgotPassword: (context) =>
+            const ForgotPasswordScreen(),
+      },
     );
   }
 }

@@ -25,14 +25,21 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void _login() {
-    if (_formKey.currentState!.validate()) {
-      setState(() => _isLoading = true);
-      // TODO: Auth logic
-      Future.delayed(const Duration(seconds: 2), () {
-        if (mounted) setState(() => _isLoading = false);
-      });
-    }
+  if (_formKey.currentState!.validate()) {
+    setState(() => _isLoading = true);
+    // TODO: Auth logic
+    Future.delayed(const Duration(seconds: 2), () {
+      if (mounted) {
+        setState(() => _isLoading = false);
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          AppConstants.routeDashboard,
+          (route) => false,
+        );
+      }
+    });
   }
+}
 
   @override
   Widget build(BuildContext context) {

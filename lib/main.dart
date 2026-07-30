@@ -6,6 +6,7 @@ import 'features/auth/splash_screen.dart';
 import 'features/auth/login_screen.dart';
 import 'features/auth/signup_screen.dart';
 import 'features/auth/forgot_password_screen.dart';
+import 'features/dashboard/dashboard_screen.dart';
 
 void main() {
   runApp(
@@ -31,6 +32,7 @@ class NexoraApp extends StatelessWidget {
         AppConstants.routeSignup: (context) => const SignupScreen(),
         AppConstants.routeForgotPassword: (context) =>
             const ForgotPasswordScreen(),
+        AppConstants.routeDashboard: (context) => const DashboardScreen(),
       },
     );
   }

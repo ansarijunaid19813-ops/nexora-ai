@@ -10,6 +10,7 @@ import 'features/auth/forgot_password_screen.dart';
 import 'features/dashboard/dashboard_screen.dart';
 import 'features/chat/chat_screen.dart';
 import 'features/agents/agents_screen.dart';
+import 'features/documents/documents_screen.dart';
 void main() {
   runApp(
     const ProviderScope(
@@ -37,6 +38,7 @@ class NexoraApp extends StatelessWidget {
         AppConstants.routeDashboard: (context) => const DashboardScreen(),
         AppConstants.routeChat: (context) => const ChatScreen(),
         AppConstants.routeAgents: (context) => const AgentsScreen(),
+        AppConstants.routeDocuments: (context) => const DocumentsScreen(),
       },
     );
   }
